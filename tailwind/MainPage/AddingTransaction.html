@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="MainPage.css">
+    <title>AddingTransaction</title>
+</head>
+
+<body class="bg-superlightblue">
+    <main>
+        <div class="mt-5">
+            <div>
+                <p class="text-greytext font-sans font-bold text-xl text-center">Adding Transaction</p>
+            </div>
+        </div>
+        <form class="w-full max-w-lg">
+            <div class="w-full px-3 mb-6 mt-6">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                    Icons
+                </label>
+                <div class="relative">
+                    <select
+                        class="block appearance-none w-full bg-white border border-gray-700 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        id="grid-state">
+                        <option>Icon 1</option>
+                        <option>Icon 2</option>
+                        <option>Icon 2</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full px-3 mb-6 mt-6">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                    Customs
+                </label>
+                <div class="relative">
+                    <select
+                        class="block appearance-none w-full bg-white border border-gray-700 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        id="grid-state">
+                        <option>Custom 1</option>
+                        <option>Custom 2</option>
+                        <option>Custom 2</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full px-3 mb-6">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-Items">
+                    Items
+                </label>
+                <input
+                    class="appearance-none block w-full bg-white text-gray-700 border border-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-Items" type="text" placeholder="Input Your Item">
+                <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+            </div>
+            <div class="flex">
+                <div class="w-full px-3 mb-6">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-Items">
+                        Dates
+                    </label>
+                    <input
+                        class="appearance-none block w-full bg-white text-gray-700 border border-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        id="grid-Items" type="text" placeholder="Input Your Dates">
+                </div>
+                <div class="w-full px-3 mb-6">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-Items">
+                        Currency
+                    </label>
+                    <input
+                        class="appearance-none block w-full bg-white text-gray-700 border border-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        id="grid-Items" type="text" placeholder="Input">
+                </div>
+            </div>
+            <div class="mt-6 flex flex-col justify-center px-10">
+                <button class="bg-blue-700 rounded-full w-full px-3 py-3" type="button">
+                    <p class="text-white font-sans font-bold text-xl">Save</p>
+                </button>
+                <button class="bg-blue-700 rounded-full w-full px-3 py-3 mt-5" type="button">
+                    <p class="text-white font-sans font-bold text-xl">Save Custom</p>
+                </button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
