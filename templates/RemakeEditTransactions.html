@@ -29,18 +29,17 @@
         </div>
     </nav>
     <!-- The nav bar somehow is on top of the content. Look at the bottom of the nav bar  -->
-
-    <form class="w-full px-5">
+    <form class="w-full px-5" action="" method="post">
         <div class="flex flex-wrap">
             <label class="block uppercase tracking-wide text-white text-sm font-medium mb-2" for="">Category</label>
         </div>
         <div class="relative">
             <select
                 class="bg-CardColorDarker block w-full appearance-none text-white py-4 px-3 rounded-lg focus:outline-none mb-8 "
-                name="Icons" id="">
-                <option value="" class="block">Food</option>
-                <option value="" class="block">Shoes & Clothings</option>
-                <option value="" class="block">Necessities</option>
+                name="Category" id="">
+                <option value="Food" class="block">Food</option>
+                <option value="Shoes & Clothings" class="block">Shoes & Clothings</option>
+                <option value="Necessities" class="block">Necessities</option>
             </select>
             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-white">
                 <?xml version="1.0" encoding="utf-8"?>
@@ -63,10 +62,10 @@
         <div class="relative">
             <select
                 class="bg-CardColorDarker block w-full appearance-none text-white py-4 px-3 rounded-lg focus:outline-none mb-8"
-                name="Icons" id="">
-                <option value="" class="block">Emoji 1</option>
-                <option value="" class="block">Emoji 2</option>
-                <option value="" class="block">Emoji 3</option>
+                name="Emojis" id="">
+                <option value="Emoji 1" class="block">Emoji 1</option>
+                <option value="Emoji 2" class="block">Emoji 2</option>
+                <option value="Emoji 3" class="block">Emoji 3</option>
             </select>
             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-white">
                 <?xml version="1.0" encoding="utf-8"?>
@@ -83,12 +82,20 @@
         </div>
 
         <div class="flex flex-wrap">
-            <label class="block uppercase tracking-wide text-white text-sm font-medium mb-2" for="">What you
-                spent</label>
+            <label class="block uppercase tracking-wide text-white text-sm font-medium mb-2" for="">What did you
+                spend</label>
         </div>
         <div>
             <input class="bg-CardColorDarker block w-full text-white py-4 px-3 rounded-lg focus:outline-none mb-8"
-                type="text" placeholder=":(" value="{{transaction.get('Items')}}">
+                type="text" placeholder="{{transaction.val().Items}}" name="Items">
+        </div>
+
+        <div class="flex flex-wrap">
+            <label class="block uppercase tracking-wide text-white text-sm font-medium mb-2" for="">How much was it</label>
+        </div>
+        <div>
+            <input class="bg-CardColorDarker block w-full text-white py-4 px-3 rounded-lg focus:outline-none mb-8"
+                type="text" placeholder="{{transaction.val().Price}}" name="Price">
         </div>
 
         <div class="flex flex-wrap">
@@ -97,18 +104,16 @@
         </div>
         <div class="">
             <input class="bg-CardColorDarker block w-full text-white py-4 px-3 rounded-lg focus:outline-none mb-8"
-                type="text" placeholder="MM/DD/YYYY">
+                type="text" placeholder="{{transaction.val().Date}}" name="Date">
+            
         </div>
 
         <button
-            class="mt-12 bg-green-500 hover:bg-green-400 text-white font-bold font-sans text-3xl py-2 w-full border-b-4 border-green-700 hover:border-green-500 rounded-lg">
+            class="mt-12 bg-green-500 hover:bg-green-400 text-white font-bold font-sans text-3xl py-2 w-full border-b-4 border-green-700 hover:border-green-500 rounded-lg" type="submit">
             Save
         </button>
-
-
-
-
     </form>
+
 </body>
 
 </html>

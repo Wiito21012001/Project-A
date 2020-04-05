@@ -37,9 +37,9 @@ def TransactionsPage():
 
 @app.route('/CardsList')
 def CardsPage():
-    Transactions_Data = db.child('Transactions_Data').get().val().items()
+    Card_Data = db.child('Card_Data').get().val().items()
     
-    return render_template('RemakeCardsListPage.html')
+    return render_template('RemakeCardsListPage.html', Card_Data=Card_Data)
 
 
 @app.route('/AddingTransactions', methods=['GET','POST'])
@@ -62,9 +62,10 @@ def AddingTransactionsPage():
     return render_template('RemakeAddingTransactions.html')
 
 
-@app.route('/EditTransactions/<str:id>', methods=['GET','POST'])
+@app.route('/EditTransactions/<id>', methods=['GET','POST'])
 def EditTransactionsPage(id):
-    transaction = db.child('Transactions_Data').child(id).val() #Dictionary
+    transaction = db.child('Transactions_Data').child(id).get()
+
     if request.method == 'POST':
         Category = request.form['Category']
         Emojis = request.form['Emojis']

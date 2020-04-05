@@ -99,16 +99,20 @@
         </nav>
     </div>
 
-    <div class="mx-5">
-        <div class="bg-CardColorDarker h-24 w-full flex justify-between items-center rounded-md" id="">
-            <div class="ml-4">
-                <div class="flex flex-col">
-                    <span class="font-sans font-semibold text-lg text-white">4301 6890 6377 XXXX</span>
-                    <span class="font-sans font-light text-lg text-white -mt-">21/2001</span>
+    <div class="flex flex-col">
+        <div class="mx-5">
+            {% for key,cards in Card_Data%}
+            <div class="bg-CardColorDarker h-24 w-full flex justify-between items-center rounded-md" id="">
+                <div class="ml-4">
+                    <div class="flex flex-col">
+                        <span class="font-sans font-semibold text-lg text-white">{{cards.get("Card_Number")}}</span>
+                        <span class="font-sans font-light text-lg text-white -mt-">{{cards.get("Exp_Date")}}</span>
+                    </div>
                 </div>
-            </div>
-            <div class="mr-4">
-                <span class="font-sans font-semibold text-lg text-white">***</span>
+                <div class="mr-4">
+                    <span class="font-sans font-semibold text-lg text-white">{{cards.get("CVC")}}</span>
+                </div>
+            {% endfor %}
             </div>
         </div>
     </div>
